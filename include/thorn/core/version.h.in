@@ -1,0 +1,27 @@
+#ifndef THORN_CORE_VERSION_H
+#define THORN_CORE_VERSION_H
+
+#include "thorn/core/export.h"
+
+#define THORN_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#define THORN_VERSION_MINOR @PROJECT_VERSION_MINOR@
+#define THORN_VERSION_PATCH @PROJECT_VERSION_PATCH@
+#define THORN_VERSION_STRING "@PROJECT_VERSION@"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Full version string, for example "0.1.0". */
+THORN_API const char *thorn_version_string(void);
+
+/* Individual version components. */
+THORN_API int thorn_version_major(void);
+THORN_API int thorn_version_minor(void);
+THORN_API int thorn_version_patch(void);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* THORN_CORE_VERSION_H */
